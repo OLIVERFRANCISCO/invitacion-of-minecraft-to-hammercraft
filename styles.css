@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Cinzel:wght@700&family=MedievalSharp&display=swap');
+
+:root {
+    --primary: #9C0000;
+    --secondary: #D4AF37;
+    --dark: #0D0D0D;
+    --purple: #4A0D4A;
+    --light: #E5E5E5;
+    --green: #00AA00;
+    --blue: #0055AA;
+    --dark-green: #006600;
+    --orange: #AA5500;
+
+    --imperium: #d4af36;
+    --caos: #9d2158;
+    --necrons: #d5f510;
+    --orkos: #a4af5a;
+    --tau: #a7b6c8;
+    --tyranidos: #63576e;
+    --mechanicuss: #3e0100;
+    --eldar: #a700a7;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--light);
+    font-family: 'MedievalSharp', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-image 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.flyer-container {
+    width: 800px;
+    min-height: 1200px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.7);
+    border: 12px double var(--secondary);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 50px var(--primary);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 72px;
+    margin: 10px 0;
+    color: var(--secondary);
+    text-shadow: 4px 4px 0 var(--primary), 8px 8px 0 #000;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: var(--light);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 var(--primary);
+    letter-spacing: 1px;
+}
+
+.divider {
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--secondary), transparent);
+    margin: 20px auto;
+}
+
+.feature {
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: rgba(13, 13, 13, 0.7);
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s;
+    backdrop-filter: blur(2px);
+}
+
+.feature-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.feature-text {
+    flex: 1;
+    min-width: 0; /* Evita problemas de desbordamiento */
+}
+
+.feature-image {
+    width: 200px; /* Ancho estándar */
+    height: 150px; /* Alto estándar */
+    flex-shrink: 0; /* Evita que se reduzca */
+    border: 2px solid var(--secondary);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.feature:hover .feature-image img {
+    transform: scale(1.05);
+}
+
+.feature-title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.factions {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.faction {
+    font-family: 'Black Ops One', cursive;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    min-width: 100px;
+}
+
+.faction:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px currentColor;
+}
+
+.imperium {
+    color: #000;
+    background-color: var(--imperium);
+}
+
+.chaos {
+    color: #E5E5E5;
+    background-color: var(--caos);
+}
+
+.orks {
+    color: #000;
+    background-color: var(--orkos);
+}
+
+.eldar {
+    color: #000;
+    background-color: var(--eldar);
+}
+
+.necrons {
+    color: #000;
+    background-color: var(--necrons)
+}
+
+.tau {
+    color: #000;
+    background-color: var(--tau);
+}
+
+.tyranids {
+    color: #E5E5E5;
+    background-color: var(--tyranidos);
+}
+
+.mechanicus {
+    color: #E5E5E5;
+    background-color: var(--mechanicuss);
+}
+
+.cta-button {
+    background: linear-gradient(to right, var(--primary), #6E0000);
+    color: var(--light);
+    padding: 15px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, var(--secondary), #B38F00);
+    color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(156, 0, 0, 0.6);
+}
+
+.footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 2px solid var(--purple);
+}
+
+.server-info {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.server-ip {
+    font-family: 'Black Ops One', cursive;
+    font-size: 22px;
+    color: var(--secondary);
+    background-color: rgba(13, 13, 13, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    font-size: 20px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.final-phrase {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: var(--secondary);
+    font-style: italic;
+    margin-top: 20px;
+    text-shadow: 1px 1px 0 #000;
+    text-align: center;
+}
+
+.mod-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mod-link:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 1024px) {
+    .flyer-container {
+        width: 90%;
+        min-height: auto;
+        margin: 10px;
+        border-width: 8px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .feature-image {
+        width: 150px;
+        height: 100px;
+    }
+
+    .feature-title {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+
+    .server-ip {
+        font-size: 18px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .final-phrase {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+
+    .feature-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feature-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .factions {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .faction {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .cta-button {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .feature-title {
+        font-size: 16px;
+    }
+
+    .server-ip {
+        font-size: 16px;
+    }
+
+    .final-phrase {
+        font-size: 14px;
+    }
+}
